@@ -1,0 +1,41 @@
+package saharat.lab5;
+public class Stack {
+	private ArrayList lst;
+
+	public Stack() {
+		lst = new ArrayList();
+	}
+
+	public void push(Object e) {
+		lst.add(e);
+	}
+	
+	public Object peek() {
+        return lst.elementData[lst.size - 1];
+    }
+
+    public Object pop() {
+        Object obj = peek();
+        lst.remove(lst.size - 1);
+        return obj;
+    }
+
+	public static void main(String[] arg) {
+		Stack s = new Stack();
+		s.push("a");
+		s.push("b");
+		s.push("c");
+		System.out.println(s);
+		System.out.println(s.peek());
+		System.out.println(s.pop());
+		System.out.println(s);
+		
+	}
+	
+	@Override
+	public String toString() {
+		return lst.toString();
+	}
+
+}
+
